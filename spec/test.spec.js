@@ -1,5 +1,8 @@
-describe("A suite", function() {
-  it("contains spec with an expectation", function() {
-    expect(true).toBe(true);
-  });
-});
+function Tennis(){
+      var scoreA;
+      var scoreB;
+      this.start = function(){
+        scoreA = 0;
+        scoreB = 0;
+      }
+  }
