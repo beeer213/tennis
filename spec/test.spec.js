@@ -16,4 +16,7 @@ function Tennis(){
           scoreA=40;
         }
      }
+     this.echo = function(){
+       
+     }
   }
