@@ -40,5 +40,8 @@ function Tennis(){
         else if(scoreA===30 && scoreB===15){
           return 'Thirty - Fifteen';
         }
+        else if(scoreA===40 && scoreB===15){
+          return 'Forty - Fifteen';
+        }
      }
   }
