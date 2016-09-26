@@ -47,5 +47,10 @@ function Tennis(){
   }
 
 describe('Tennis game', function(){
-  
+  //A win
+  var tennis = new Tennis();
+  it('should echo Love - Love when 0 - 0 on the game', function(){
+    tennis.start();
+    expect(tennis.echo()).toEqual('Love - Love');
+  });
 });
