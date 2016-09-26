@@ -50,7 +50,11 @@ describe('Tennis game', function(){
   //A win
   var tennis = new Tennis();
   it('should echo Love - Love when 0 - 0 on the game', function(){
-    tennis.start();
-    expect(tennis.echo()).toEqual('Love - Love');
-  });
+        tennis.start();
+        expect(tennis.echo()).toEqual('Love - Love');
+      });
+  it('should echo Fifteen - Love when 15 - 0 on the game', function(){
+        tennis.getScoreA();
+        expect(tennis.echo()).toEqual('Fifteen - Love');
+      });
 });
