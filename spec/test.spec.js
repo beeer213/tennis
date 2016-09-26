@@ -45,3 +45,7 @@ function Tennis(){
         }
      }
   }
+
+describe('Tennis game', function(){
+  
+});
