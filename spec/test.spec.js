@@ -9,5 +9,8 @@ function Tennis(){
        if(scoreA===0){
          scoreA=15;
        }
+       else if(scoreA===15){
+          scoreA=30;
+        }
      }
   }
