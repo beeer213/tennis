@@ -95,5 +95,9 @@ describe('Tennis game', function(){
                   tennis.getScoreB();
                   expect(tennis.echo()).toEqual('Love - Fifteen');
                 })
+        it('should echo Love - Fifteen when 0 - 30 on the game', function(){
+                          tennis.getScoreB();
+                          expect(tennis.echo()).toEqual('Love - Thirty');
+                })
 
 });
