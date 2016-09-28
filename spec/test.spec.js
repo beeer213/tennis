@@ -15,6 +15,9 @@ function Tennis(){
         else if(scoreA===30){
           scoreA=40;
         }
+        else if(scoreA===40){
+          scoreA=41;
+        }
 
      }
      this.getScoreB = function(){
@@ -41,8 +44,11 @@ function Tennis(){
           return 'Thirty - Love';
         }
         else if(scoreA===40 && scoreB===0){
-          scoreA = 0;
           return 'Forty - Love';
+        }
+        else if(scoreA>40 && scoreB===0){
+          scoreA = 0;
+          return 'Player A won';
         }
         //15
         else if(scoreA===0 && scoreB===15){
