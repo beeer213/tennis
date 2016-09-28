@@ -127,10 +127,14 @@ describe('Tennis game', function(){
               tennis.getScoreB();
               expect(tennis.echo()).toEqual('Player B won');
                 })
+          //15-15,30-15
         it('should echo Fifteen - Fifteen when 15 - 15 on the game', function(){
               tennis.getScoreA();
               tennis.getScoreB();
               expect(tennis.echo()).toEqual('Fifteen - Fifteen');
                 })
-
+        it('should echo Thirty - Fifteen when 30 - 15 on the game', function(){
+              tennis.getScoreA();
+              expect(tennis.echo()).toEqual('Thirty - Fifteen');
+                })
 });
