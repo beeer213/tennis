@@ -16,6 +16,11 @@ function Tennis(){
           scoreA=40;
         }
      }
+     this.getScoreB = function(){
+      if(scoreB===0){
+        scoreB=15;
+        }
+    }
      this.echo = function(){
        //0
         if(scoreA===0 && scoreB===0){
