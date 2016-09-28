@@ -20,6 +20,10 @@ function Tennis(){
       if(scoreB===0){
         scoreB=15;
         }
+      else if(scoreB===15){
+        scoreB=30;
+      }
+
     }
      this.echo = function(){
        //0
