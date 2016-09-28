@@ -30,6 +30,9 @@ function Tennis(){
       else if(scoreB===30){
         scoreB=40;
       }
+      else if(scoreB===40){
+        scoreB=41;
+      }
 
     }
      this.echo = function(){
@@ -48,6 +51,7 @@ function Tennis(){
         }
         else if(scoreA>40 && scoreB===0){
           scoreA = 0;
+          scoreB = 0;
           return 'Player A won';
         }
         //15
@@ -73,6 +77,11 @@ function Tennis(){
         else if(scoreA===0 && scoreB===40){
           return 'Love - Forty';
         }
+        else if(scoreA===0 && scoreB>40){
+          scoreA = 0;
+          scoreB = 0;
+          return 'Player B won';
+        }
 
      }
   }
@@ -95,22 +104,28 @@ describe('Tennis game', function(){
         it('should echo Forty - Love when 40 - 0 on the game', function(){
               tennis.getScoreA();
               expect(tennis.echo()).toEqual('Forty - Love');
-                      })
+            })
         it('should echo Player A won when score A> 40 and B<40 the game', function(){
               tennis.getScoreA();
               expect(tennis.echo()).toEqual('Player A won');
-                      })
+            })
+
+        //B
         it('should echo Love - Fifteen when 0 - 15 on the game', function(){
               tennis.getScoreB();
               expect(tennis.echo()).toEqual('Love - Fifteen');
                 })
         it('should echo Love - Thirty when 0 - 30 on the game', function(){
-                tennis.getScoreB();
-                expect(tennis.echo()).toEqual('Love - Thirty');
+              tennis.getScoreB();
+              expect(tennis.echo()).toEqual('Love - Thirty');
                 })
         it('should echo Love - Forty when 0 - 40 on the game', function(){
-                  tennis.getScoreB();
-                  expect(tennis.echo()).toEqual('Love - Forty');
+              tennis.getScoreB();
+              expect(tennis.echo()).toEqual('Love - Forty');
+                })
+        it('should echo Player B won when score B> 40 and A<40 the game', function(){
+              tennis.getScoreB();
+              expect(tennis.echo()).toEqual('Player B won');
                 })
 
 
