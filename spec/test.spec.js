@@ -83,21 +83,26 @@ describe('Tennis game', function(){
               expect(tennis.echo()).toEqual('Fifteen - Love');
             })
         it('should echo Thirty - Love when 30 - 0 on the game', function(){
-                  tennis.getScoreA();
-                  expect(tennis.echo()).toEqual('Thirty - Love');
+              tennis.getScoreA();
+              expect(tennis.echo()).toEqual('Thirty - Love');
             })
         it('should echo Forty - Love when 40 - 0 on the game', function(){
-                  tennis.getScoreA();
-                  expect(tennis.echo()).toEqual('Forty - Love');
+              tennis.getScoreA();
+              expect(tennis.echo()).toEqual('Forty - Love');
 
             })
         it('should echo Love - Fifteen when 0 - 15 on the game', function(){
+              tennis.getScoreB();
+              expect(tennis.echo()).toEqual('Love - Fifteen');
+                })
+        it('should echo Love - Thirty when 0 - 30 on the game', function(){
+                tennis.getScoreB();
+                expect(tennis.echo()).toEqual('Love - Thirty');
+                })
+        it('should echo Love - Forty when 0 - 40 on the game', function(){
                   tennis.getScoreB();
-                  expect(tennis.echo()).toEqual('Love - Fifteen');
+                  expect(tennis.echo()).toEqual('Love - Forty');
                 })
-        it('should echo Love - Fifteen when 0 - 30 on the game', function(){
-                          tennis.getScoreB();
-                          expect(tennis.echo()).toEqual('Love - Thirty');
-                })
+
 
 });
